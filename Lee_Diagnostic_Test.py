@@ -22,6 +22,8 @@ def main():
         elif short_breath == 'no':
             print('\nDiagnosis: Patient may have the flu.', end=' ')
             print('Additional symptoms may include cough, fatigue, weakness, and/or exhaustion.')
+
+        # If nested if reach this point, then user entered invalid input
         else:
             print('*** Invalid input entered, program ended ***')
 
