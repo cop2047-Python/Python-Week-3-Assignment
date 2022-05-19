@@ -5,12 +5,12 @@
 
 def main():
     # Get input: Does patient hava a fever?
-    fever = input('Does patient have a fever? <Yes or No> ')
+    fever = input('\nDoes patient have a fever? <Yes or No> ')
     fever = fever.lower()
 
     if fever == 'yes':
         # Get input: Does patient have shortness of breath?
-        short_breath = input('Is patient experiencing shortness of breath? <Yes or No>')
+        short_breath = input('Is patient experiencing shortness of breath? <Yes or No> ')
         short_breath = short_breath.lower()
 
         # If fever and shortness of breath, patient may have COVID-19
@@ -22,10 +22,12 @@ def main():
         elif short_breath == 'no':
             print('\nDiagnosis: Patient may have the flu.', end=' ')
             print('Additional symptoms may include cough, fatigue, weakness, and/or exhaustion.')
+        else:
+            print('*** Invalid input entered, program ended ***')
 
     elif fever == 'no':
         # Get input: Does patient have itchy eyes?
-        itchy_eyes = input('Does patient have itchy eyes? <Yes or No>')
+        itchy_eyes = input('Does patient have itchy eyes? <Yes or No> ')
         itchy_eyes = itchy_eyes.lower()
 
         # If no fever and itchy eyes, patient may have allergies
@@ -34,11 +36,14 @@ def main():
             print('Additional symptoms may include sneezing and/or a runny nose.')
 
         # if no fever and no itchy eyes, patient may have a common cold
-        if itchy_eyes == 'no':
+        elif itchy_eyes == 'no':
             print('\nDiagnosis: Patient may have a common cold.', end=' ')
             print('Additional symptoms may include sneezing, a runny nose, and/or mild chest discomfort.')
+        else:
+            print('*** Invalid input entered, program ended ***')
+
     else:
-        print('Invalid input entered, program ended.')
+        print('*** Invalid input entered, program ended ***')
 
 
 # Call the main function.
